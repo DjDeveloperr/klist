@@ -15,6 +15,7 @@ export function App(props: AppProps) {
         <title>{props.title}</title>
         <link rel="stylesheet" href="/style.css" />
         <meta name="og:title" content={props.title ?? "K-List"} />
+        <meta name="og:type" content="article" />
         <meta
           name="og:description"
           content={props.description ?? "Find your next favorite Korean drama."}
