@@ -20,7 +20,6 @@ export function App(props: AppProps) {
           content={props.description ?? "Find your next favorite Korean drama."}
         />
         {props.image ? <meta name="og:image" content={props.image} /> : null}
-        <meta name="theme-color" content="#E50914" />
       </Head>
       {props.children}
     </div>
