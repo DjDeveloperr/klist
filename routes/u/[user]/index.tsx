@@ -26,7 +26,7 @@ export default function User(props: PageProps) {
         {user.lists.map((list) => (
           (
             <>
-              <h4>{list.name}</h4>
+              <h4>{list.name} ({list.values.length})</h4>
               <div class="kcard-grid">
                 {list.values.map((drama) => (
                   <KCard {...data.dramas.find((e) => e.id === drama)!} />

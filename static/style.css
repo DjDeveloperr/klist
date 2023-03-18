@@ -111,8 +111,8 @@ a {
 
 @media screen and (max-width: 768px) {
   .kcard {
-    width: 140px;
-    height: 80px;
+    width: 145px;
+    height: 82.5px;
   }
 }
 
@@ -136,6 +136,6 @@ a {
 
 @media screen and (max-width: 768px) {
   .kcard-grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   }
 }
