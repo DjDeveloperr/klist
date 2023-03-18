@@ -26,6 +26,7 @@ export default function KDrama(props: PageProps) {
       >
       </div>
       <div class="drama-info-overlay">
+        <img class="drama-info-cover" src={drama.cover} alt={drama.name} />
         <div class="drama-info">
           <h2 class="drama-name">{drama.name}</h2>
           <h4 class="drama-subinfo">

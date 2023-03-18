@@ -55,14 +55,30 @@ a {
   left: 0;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.drama-info-cover {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .drama-info-overlay {
+    width: 100vw;
+  }
+
+  .drama-info-cover {
+    display: block;
+  }
 }
 
 .drama-info {
   padding: 2rem;
   margin: 0 auto;
   font-size: 1.2rem;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .drama-info > * {
