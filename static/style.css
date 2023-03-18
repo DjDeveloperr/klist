@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #57b1da;
+  --netflix: #E50914;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.not-found > * {
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.drama-image-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.drama-info-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 40vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.drama-info {
+  padding: 2rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.drama-info > * {
+  margin: 1rem 0;
+}
+
+.watch-btn {
+  background-color: var(--netflix);
+  color: var(--text-color);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.kcard {
+  display: inline-block;
+  width: 280px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem 0;
+}
+
+.home {
+  padding: 2rem;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.kcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem 0;
+  /** align center */
+  justify-items: center;
+}
