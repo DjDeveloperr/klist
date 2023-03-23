@@ -12,7 +12,7 @@
 
   --kcard-big-width: 280px;
   --kcard-big-height: 160px;
-  --kcard-small-width: 152px;
+  --kcard-small-width: 160px;
   --kcard-small-height: calc(var(--kcard-small-width) * 0.57142);
 }
 
