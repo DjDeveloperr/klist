@@ -20,11 +20,12 @@ export function findBySlug(slug: string) {
 }
 
 export function search(k: string) {
-  const parts = k.split("+").map((part) => alphanum(part));
+  const parts = k.split(",").map((part) => alphanum(part));
   return dramaSorted.filter((drama) => (
     parts.some((part) =>
       drama.id === parseInt(part) ||
-      alphanum(drama.slug).startsWith(part) ||
+      alphanum(drama.slug).includes(part) ||
+      part.includes(alphanum(drama.slug)) ||
       drama.actors.some((actor) => alphanum(actor) === part)
     )
   ));

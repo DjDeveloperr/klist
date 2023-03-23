@@ -11,6 +11,14 @@ export default function Search(props: PageProps) {
     <App title="Search Results - K-List">
       <div class="home">
         <KListTitle />
+        <h3 style="text-align: center">Search Results</h3>
+        {results.length === 0
+          ? <p style="text-align: center">No results found.</p>
+          : (
+            <p style="text-align: center">
+              {results.length} result{results.length === 1 ? "" : "s"} found
+            </p>
+          )}
         <div class="kcard-grid">
           {results.map((drama) => <KCard {...drama} />)}
         </div>
