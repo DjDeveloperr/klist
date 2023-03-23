@@ -1,0 +1,17 @@
+{
+  "name": "K-List",
+  "short_name": "K-List",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/?standalone=1",
+  "description": "Find your next favorite Korean drama.",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

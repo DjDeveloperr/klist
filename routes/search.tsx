@@ -2,6 +2,7 @@ import { PageProps } from "$fresh/server.ts";
 import { App } from "../components/App.tsx";
 import { KCard } from "../components/KCard.tsx";
 import { KListTitle } from "../components/KListTitle.tsx";
+import KDramaSearch from "../islands/KDramaSearch.tsx";
 import { search } from "../util/data.ts";
 
 export default function Search(props: PageProps) {
@@ -11,6 +12,7 @@ export default function Search(props: PageProps) {
     <App title="Search Results - K-List">
       <div class="home">
         <KListTitle />
+        <KDramaSearch />
         <h3 style="text-align: center">Search Results</h3>
         {results.length === 0
           ? <p style="text-align: center">No results found.</p>

@@ -18,12 +18,25 @@ export function App(props: AppProps) {
         />
         <title>{props.title}</title>
         <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" href="/icon.png" />
+        <meta name="charset" content="utf-8" />
+        <meta
+          name="mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="og:title" content={props.title ?? "K-List"} />
         <meta name="og:type" content="article" />
         <meta
           name="og:description"
           content={props.description ?? "Find your next favorite Korean drama."}
         />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="manifest" href="/manifest.json" />
         {props.image ? <meta name="og:image" content={props.image} /> : null}
       </Head>
       {props.children}
