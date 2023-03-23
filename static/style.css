@@ -9,6 +9,11 @@
   --text-color: #ffffff;
   --link-color: #57b1da;
   --netflix: #E50914;
+
+  --kcard-big-width: 280px;
+  --kcard-big-height: 160px;
+  --kcard-small-width: 148px;
+  --kcard-small-height: calc(var(--kcard-small-width) * 0.57142);
 }
 
 body {
@@ -101,18 +106,18 @@ a {
 
 .kcard {
   display: inline-block;
-  width: 280px;
-  height: 160px;
+  width: var(--kcard-big-width);
+  height: var(--kcard-big-height);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 1rem 0;
+  margin: 0.3rem 0;
 }
 
 @media screen and (max-width: 768px) {
   .kcard {
-    width: 145px;
-    height: 82.5px;
+    width: var(--kcard-small-width);
+    height: var(--kcard-small-height);
   }
 }
 
@@ -138,4 +143,32 @@ a {
   .kcard-grid {
     grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
   }
+}
+
+.ksearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.ksearch > * {
+  margin: 0 1rem;
+}
+
+.ksearch-query {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.title {
+  margin: 1rem 0;
+  text-align: center;
+  color: var(--netflix);
+  font-size: 2rem;
+  font-weight: 600;
+  display: block;
 }

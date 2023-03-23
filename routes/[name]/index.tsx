@@ -1,14 +1,12 @@
 import { PageProps } from "$fresh/server.ts";
 import { App } from "../../components/App.tsx";
+import { KListTitle } from "../../components/KListTitle.tsx";
 import { NotFound } from "../../components/NotFound.tsx";
-import data from "../../static/data.json" assert { type: "json" };
+import { findBySlug } from "../../util/data.ts";
 
 export default function KDrama(props: PageProps) {
   const nameOrId = props.params.name;
-  const drama = data.dramas
-    .find((drama) =>
-      drama.id.toString() === nameOrId || drama.slug === nameOrId
-    );
+  const drama = findBySlug(nameOrId);
 
   if (!drama) {
     return <NotFound />;
@@ -28,6 +26,7 @@ export default function KDrama(props: PageProps) {
       <div class="drama-info-overlay">
         <img class="drama-info-cover" src={drama.cover} alt={drama.name} />
         <div class="drama-info">
+          <KListTitle align="left" />
           <h2 class="drama-name">{drama.name}</h2>
           <h4 class="drama-subinfo">
             {drama.startDate}
@@ -49,8 +48,22 @@ export default function KDrama(props: PageProps) {
           </p>
           <h4>Actors</h4>
           <p>{drama.actors.join(", ")}</p>
-          <h4>Creators</h4>
-          <p>{drama.creators.join(", ")}</p>
+          {drama.creators.length
+            ? (
+              <>
+                <h4>Creators</h4>
+                <p>{drama.creators.join(", ")}</p>
+              </>
+            )
+            : null}
+          {drama.director.length
+            ? (
+              <>
+                <h4>Director</h4>
+                <p>{drama.director.join(", ")}</p>
+              </>
+            )
+            : null}
         </div>
       </div>
     </App>

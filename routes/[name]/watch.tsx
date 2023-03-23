@@ -1,6 +1,6 @@
 import { HandlerContext } from "$fresh/server.ts";
 import { NotFound } from "../../components/NotFound.tsx";
-import data from "../../static/data.json" assert { type: "json" };
+import { findBySlug } from "../../util/data.ts";
 
 export default NotFound;
 
@@ -9,10 +9,7 @@ export const handler = async (
   ctx: HandlerContext,
 ): Promise<Response> => {
   const nameOrId = ctx.params.name;
-  const drama = data.dramas
-    .find((drama) =>
-      drama.id.toString() === nameOrId || drama.slug === nameOrId
-    );
+  const drama = findBySlug(nameOrId);
 
   if (!drama) {
     return await ctx.render();

@@ -7,7 +7,9 @@ import * as $0 from "./routes/[name]/index.tsx";
 import * as $1 from "./routes/[name]/netflix.tsx";
 import * as $2 from "./routes/[name]/watch.tsx";
 import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/u/[user]/index.tsx";
+import * as $4 from "./routes/search.tsx";
+import * as $5 from "./routes/u/[user]/index.tsx";
+import * as $$0 from "./islands/KDramaSearch.tsx";
 
 const manifest = {
   routes: {
@@ -15,9 +17,12 @@ const manifest = {
     "./routes/[name]/netflix.tsx": $1,
     "./routes/[name]/watch.tsx": $2,
     "./routes/index.tsx": $3,
-    "./routes/u/[user]/index.tsx": $4,
+    "./routes/search.tsx": $4,
+    "./routes/u/[user]/index.tsx": $5,
   },
-  islands: {},
+  islands: {
+    "./islands/KDramaSearch.tsx": $$0,
+  },
   baseUrl: import.meta.url,
   config,
 };

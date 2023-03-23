@@ -12,7 +12,10 @@ export function App(props: AppProps) {
   return (
     <div class="app">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1 viewport-fit=cover"
+        />
         <title>{props.title}</title>
         <link rel="stylesheet" href="/style.css" />
         <meta name="og:title" content={props.title ?? "K-List"} />
