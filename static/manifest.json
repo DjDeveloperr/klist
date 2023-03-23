@@ -5,7 +5,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/?standalone=1",
+  "start_url": "/",
   "description": "Find your next favorite Korean drama.",
   "orientation": "portrait",
   "icons": [
