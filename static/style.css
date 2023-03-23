@@ -12,7 +12,7 @@
 
   --kcard-big-width: 280px;
   --kcard-big-height: 160px;
-  --kcard-small-width: 148px;
+  --kcard-small-width: 152px;
   --kcard-small-height: calc(var(--kcard-small-width) * 0.57142);
 }
 
@@ -111,7 +111,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0.3rem 0;
+  margin: 0.2rem 0;
 }
 
 @media screen and (max-width: 768px) {
