@@ -10,6 +10,9 @@ export default function Home() {
       <div class="home">
         <KListTitle />
         <KDramaSearch />
+        <a class="instagram" style="text-align: center" href="https://instagram.com/klist.clips">
+          @klist.clips
+        </a>
         <div class="kcard-grid">
           {data.dramas.map((drama) => <KCard {...drama} />)}
         </div>
