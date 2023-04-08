@@ -270,7 +270,7 @@ a {
   outline: none;
   resize: none;
   height: 50%;
-  min-width: 440px;
+  min-width: 400px;
   background-color: black;
   color: var(--text-color);
   border: 1px solid var(--text-color);
