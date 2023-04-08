@@ -47,7 +47,19 @@ export default function KDrama(props: PageProps) {
             </a>
           </p>
           <h4>Actors</h4>
-          <p>{drama.actors.join(", ")}</p>
+          <p>
+            {drama.actors.map((actor, i) => (
+              <>
+                <a
+                  style="color: #fff;"
+                  href={`/search?q=${encodeURIComponent(actor)}`}
+                >
+                  {actor}
+                </a>
+                {(i < drama.actors.length - 1) ? ", " : ""}
+              </>
+            ))}
+          </p>
           {drama.creators.length
             ? (
               <>

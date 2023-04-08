@@ -1,11 +1,11 @@
 import { type PageProps } from "$fresh/server.ts";
 import { type Handlers } from "$fresh/server.ts";
 import { App } from "@/components/App.tsx";
-import { KCard } from "@/components/KCard.tsx";
+import { KCard } from "@/islands/KCard.tsx";
 import { KListTitle } from "@/components/KListTitle.tsx";
 import KDramaSearch from "@/islands/KDramaSearch.tsx";
 import data from "@/static/data.json" assert { type: "json" };
-import { type AccountState } from "./_middleware.ts";
+import { type AccountState } from "@/routes/_middleware.ts";
 
 export const handler: Handlers<AccountState, AccountState> = {
   GET(_request, ctx) {

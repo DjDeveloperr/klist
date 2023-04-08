@@ -13,6 +13,10 @@ export const handler: Handlers<unknown, AccountState> = {
     assert(typeof redirect === "string");
     assert(ctx.state.user !== null);
 
+    console.log("id", id);
+    console.log("titleID", titleID);
+    console.log("redirect", redirect);
+
     await ctx.state.supabaseClient.from("klist_entries").delete().eq(
       "list_id",
       id,

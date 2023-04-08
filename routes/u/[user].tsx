@@ -1,6 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
 import { App } from "@/components/App.tsx";
-import { KCard } from "@/components/KCard.tsx";
+import { KCard } from "@/islands/KCard.tsx";
 import { KListTitle } from "@/components/KListTitle.tsx";
 import { NotFound } from "@/components/NotFound.tsx";
 import data from "@/static/data.json" assert { type: "json" };
@@ -160,12 +160,16 @@ export default function User(props: PageProps<UserPageData>) {
           )
         ))}
         <br />
-        <p>
-          Logged in as{" "}
-          <a href={`/u/${props.data.user?.username}`}>
-            @{props.data.user?.username}
-          </a>. <a href="/logout">Logout</a>
-        </p>
+        {props.data.user
+          ? (
+            <p>
+              Logged in as{" "}
+              <a href={`/u/${props.data.user?.username}`}>
+                @{props.data.user?.username}
+              </a>. <a href="/logout">Logout</a>
+            </p>
+          )
+          : ""}
       </div>
     </App>
   );

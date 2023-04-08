@@ -3,6 +3,7 @@ export default function KDramaSearch(props: {
     listId: string;
     redirect: string;
   };
+  init?: string;
 }) {
   return (
     <form
@@ -32,6 +33,7 @@ export default function KDramaSearch(props: {
         name="q"
         placeholder="Search for K-Drama, Actor..."
         aria-label="Search for K-Drama, Actor..."
+        value={props.init}
       />
     </form>
   );

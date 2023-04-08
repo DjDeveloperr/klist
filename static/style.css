@@ -345,3 +345,12 @@ a {
 .rot-90 {
   transform: rotate(45deg);
 }
+
+.list-adder > button {
+  color: green;
+}
+
+.list-remover > button {
+  color: var(--netflix);
+  transform: rotate(45deg);
+}

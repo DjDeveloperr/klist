@@ -1,7 +1,7 @@
 import { type Handlers } from "$fresh/server.ts";
 import { PageProps } from "$fresh/server.ts";
 import { App } from "@/components/App.tsx";
-import { KCard } from "@/components/KCard.tsx";
+import { KCard } from "@/islands/KCard.tsx";
 import { KListTitle } from "@/components/KListTitle.tsx";
 import KDramaSearch from "@/islands/KDramaSearch.tsx";
 import { search } from "@/util/data.ts";
@@ -51,6 +51,7 @@ export default function Search(props: PageProps<List | undefined>) {
       <div class="home">
         <KListTitle />
         <KDramaSearch
+          init={props.url.searchParams.get("q") || ""}
           listAddInfo={list
             ? ({
               listId: list!,
@@ -90,7 +91,7 @@ export default function Search(props: PageProps<List | undefined>) {
         {redirect
           ? (
             <p style="text-align: center; padding: 1rem">
-              <a href={redirect}>Done</a>
+              <a href={redirect}>Back</a>
             </p>
           )
           : null}

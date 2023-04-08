@@ -4,7 +4,7 @@ import { type Handlers } from "$fresh/server.ts";
 import { type AccountState } from "@/routes/_middleware.ts";
 import { type List } from "@/routes/u/[user].tsx";
 import { assert } from "std/testing/asserts.ts";
-import { KCard } from "../../components/KCard.tsx";
+import { KCard } from "@/islands/KCard.tsx";
 import data from "@/static/data.json" assert { type: "json" };
 import KDramaSearch from "../../islands/KDramaSearch.tsx";
 
@@ -78,7 +78,10 @@ export default function EditListPage(props: PageProps<List>) {
           : null}
         <div class="kcard-grid">
           {props.data.titles.map((drama) => (
-            <KCard {...data.dramas.find((e) => e.id === drama)!} />
+            <KCard
+              {...data.dramas.find((e) => e.id === drama)!}
+              removeFromList={props.data.id}
+            />
           ))}
         </div>
       </div>

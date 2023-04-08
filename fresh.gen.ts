@@ -24,7 +24,8 @@ import * as $17 from "./routes/u/[user].tsx";
 import * as $18 from "./routes/u/edit-bio.tsx";
 import * as $19 from "./routes/u/edit-list.tsx";
 import * as $20 from "./routes/u/index.tsx";
-import * as $$0 from "./islands/KDramaSearch.tsx";
+import * as $$0 from "./islands/KCard.tsx";
+import * as $$1 from "./islands/KDramaSearch.tsx";
 
 const manifest = {
   routes: {
@@ -51,7 +52,8 @@ const manifest = {
     "./routes/u/index.tsx": $20,
   },
   islands: {
-    "./islands/KDramaSearch.tsx": $$0,
+    "./islands/KCard.tsx": $$0,
+    "./islands/KDramaSearch.tsx": $$1,
   },
   baseUrl: import.meta.url,
   config,
