@@ -50,7 +50,14 @@ export default function Search(props: PageProps<List | undefined>) {
     <App title="Search Results - K-List">
       <div class="home">
         <KListTitle />
-        <KDramaSearch />
+        <KDramaSearch
+          listAddInfo={list
+            ? ({
+              listId: list!,
+              redirect: redirect!,
+            })
+            : undefined}
+        />
         <h3 style="text-align: center">Search Results</h3>
         {results.length === 0
           ? <p style="text-align: center">No results found.</p>
