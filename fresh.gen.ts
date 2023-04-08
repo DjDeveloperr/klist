@@ -6,9 +6,24 @@ import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name]/index.tsx";
 import * as $1 from "./routes/[name]/netflix.tsx";
 import * as $2 from "./routes/[name]/watch.tsx";
-import * as $3 from "./routes/index.tsx";
-import * as $4 from "./routes/search.tsx";
-import * as $5 from "./routes/u/[user]/index.tsx";
+import * as $3 from "./routes/_middleware.ts";
+import * as $4 from "./routes/api/edit-bio.ts";
+import * as $5 from "./routes/api/edit-list-name.ts";
+import * as $6 from "./routes/api/list-add.ts";
+import * as $7 from "./routes/api/list-remove.ts";
+import * as $8 from "./routes/api/login.ts";
+import * as $9 from "./routes/api/logout.ts";
+import * as $10 from "./routes/api/new-list.ts";
+import * as $11 from "./routes/api/signup.ts";
+import * as $12 from "./routes/index.tsx";
+import * as $13 from "./routes/login.tsx";
+import * as $14 from "./routes/logout.tsx";
+import * as $15 from "./routes/search.tsx";
+import * as $16 from "./routes/signup.tsx";
+import * as $17 from "./routes/u/[user].tsx";
+import * as $18 from "./routes/u/edit-bio.tsx";
+import * as $19 from "./routes/u/edit-list.tsx";
+import * as $20 from "./routes/u/index.tsx";
 import * as $$0 from "./islands/KDramaSearch.tsx";
 
 const manifest = {
@@ -16,9 +31,24 @@ const manifest = {
     "./routes/[name]/index.tsx": $0,
     "./routes/[name]/netflix.tsx": $1,
     "./routes/[name]/watch.tsx": $2,
-    "./routes/index.tsx": $3,
-    "./routes/search.tsx": $4,
-    "./routes/u/[user]/index.tsx": $5,
+    "./routes/_middleware.ts": $3,
+    "./routes/api/edit-bio.ts": $4,
+    "./routes/api/edit-list-name.ts": $5,
+    "./routes/api/list-add.ts": $6,
+    "./routes/api/list-remove.ts": $7,
+    "./routes/api/login.ts": $8,
+    "./routes/api/logout.ts": $9,
+    "./routes/api/new-list.ts": $10,
+    "./routes/api/signup.ts": $11,
+    "./routes/index.tsx": $12,
+    "./routes/login.tsx": $13,
+    "./routes/logout.tsx": $14,
+    "./routes/search.tsx": $15,
+    "./routes/signup.tsx": $16,
+    "./routes/u/[user].tsx": $17,
+    "./routes/u/edit-bio.tsx": $18,
+    "./routes/u/edit-list.tsx": $19,
+    "./routes/u/index.tsx": $20,
   },
   islands: {
     "./islands/KDramaSearch.tsx": $$0,

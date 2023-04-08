@@ -1,6 +1,31 @@
-export default function KDramaSearch() {
+export default function KDramaSearch(props: {
+  listAddInfo?: {
+    listId: string;
+    redirect: string;
+  };
+}) {
   return (
-    <form class="ksearch" action="/search" method="get">
+    <form
+      class="ksearch"
+      action="/search"
+      method="get"
+    >
+      {props.listAddInfo
+        ? (
+          <>
+            <input
+              type="hidden"
+              name="list"
+              value={props.listAddInfo?.listId}
+            />
+            <input
+              type="hidden"
+              name="redirect"
+              value={props.listAddInfo?.redirect}
+            />
+          </>
+        )
+        : null}
       <input
         class="ksearch-query"
         type="text"

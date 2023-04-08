@@ -1,0 +1,1 @@
+export const AUTHENTICATED_REDIRECT_PATH = "/u";

@@ -30,7 +30,68 @@ body {
   height: 100vh;
 }
 
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .not-found > * {
+  margin: 1rem 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-form > * {
+  margin: 1rem 0;
+  display: block;
+}
+
+.auth-form > h2 {
+  font-size: 2rem;
+  color: var(--netflix);
+}
+
+.auth-form > input {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.auth-form > button {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--netflix);
+  color: var(--text-color);
+}
+
+.notice-error {
+  background-color: #f1dada;
+  color: black;
+  border: 1px solid #ff0000;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.notice-secondary {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
   margin: 1rem 0;
 }
 
@@ -105,6 +166,7 @@ a {
 }
 
 .kcard {
+  position: relative;
   display: inline-block;
   width: var(--kcard-big-width);
   height: var(--kcard-big-height);
@@ -112,6 +174,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0.2rem 0;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 768px) {
@@ -121,7 +184,7 @@ a {
   }
 }
 
-.home, .user {
+.home, .user, .list-editor {
   padding: 2rem;
   margin: 0 auto;
   font-size: 1.2rem;
@@ -171,4 +234,114 @@ a {
   font-size: 2rem;
   font-weight: 600;
   display: block;
+}
+
+.edit-bio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.edit-bio-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.edit-bio-form > * {
+  margin: 1rem 0;
+  display: block;
+}
+
+.edit-bio-form > h2 {
+  font-size: 2rem;
+  color: var(--netflix);
+}
+
+.edit-bio-form > textarea {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  height: 50%;
+  min-width: 480px;
+  background-color: black;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.edit-bio-form > button {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--netflix);
+  color: var(--text-color);
+}
+
+.edit-list-name {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: black;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.edit-list-name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-list-name-container > * {
+  margin: 0 0.6rem;
+}
+
+.edit-list-name-button {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--netflix);
+  color: var(--text-color);
+}
+
+.kcard-add-to-list {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0.7rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.kcard-add-to-list > button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #141414;
+  font-weight: 600;
+  border-radius: 50%;
+  font-size: 1.7rem;
+}
+
+.rot-90 {
+  transform: rotate(45deg);
 }

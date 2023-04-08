@@ -1,8 +1,8 @@
 import { PageProps } from "$fresh/server.ts";
-import { App } from "../../components/App.tsx";
-import { KListTitle } from "../../components/KListTitle.tsx";
-import { NotFound } from "../../components/NotFound.tsx";
-import { findBySlug } from "../../util/data.ts";
+import { App } from "@/components/App.tsx";
+import { KListTitle } from "@/components/KListTitle.tsx";
+import { NotFound } from "@/components/NotFound.tsx";
+import { findBySlug } from "@/util/data.ts";
 
 export default function KDrama(props: PageProps) {
   const nameOrId = props.params.name;

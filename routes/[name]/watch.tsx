@@ -1,6 +1,6 @@
 import { HandlerContext } from "$fresh/server.ts";
-import { NotFound } from "../../components/NotFound.tsx";
-import { findBySlug } from "../../util/data.ts";
+import { NotFound } from "@/components/NotFound.tsx";
+import { findBySlug } from "@/util/data.ts";
 
 export default NotFound;
 
