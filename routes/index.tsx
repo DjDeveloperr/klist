@@ -39,6 +39,13 @@ export default function Home(props: PageProps<AccountState>) {
         >
           @klist.clips
         </a>
+        <a
+          class="instagram"
+          style="text-align: center; display: block"
+          href="https://discord.gg/7ppA8Z3Gmv"
+        >
+          Join Discord
+        </a>
         <div class="kcard-grid">
           {data.dramas.map((drama) => <KCard {...drama} />)}
         </div>
